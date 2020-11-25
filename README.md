@@ -1,5 +1,7 @@
-Title of the project: Bash, Make, Git, and GitHub
+Title of the project: __Bash, Make, Git, and GitHub__
 
-Date make ran at: Wed Nov 25 23:33:47 EAT 2020
+Date make ran at:
+Wed Nov  25 23:57:35 EAT 2020
 
-Number of lines file guessinggame.sh contains: 29
+Number of lines file guessinggame.sh contains:
+      29
