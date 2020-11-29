@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
-num=$(ls | wc -l)
+
 
 function guess_file {
-
+	num=$(-type f| wc -l)
 	echo "Enter your guess for number:"
 	read guess
 	if [[ $guess -eq num ]]
 	then
 	echo "Guessed!"
 		else
-		if [[ $guess -gt filenum ]]
+		if [[ $guess -gt num ]]
 		then
 			echo "Too much, press Enter:"
 			guess_file
