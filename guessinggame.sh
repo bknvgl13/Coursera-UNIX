@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-
+function num_file() {
+num=$(-type f| wc -l)
+}
 
 function guess_file {
-	num=$(-type f| wc -l)
+	num = $num_file
 	echo "Enter your guess for number:"
 	read guess
 	if [[ $guess -eq num ]]
