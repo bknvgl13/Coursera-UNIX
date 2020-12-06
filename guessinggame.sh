@@ -11,17 +11,18 @@ function guess_file {
 	num = $num_file
 	echo "Enter your guess for the number of files in directory:"
 	read guess
-	if [ "$guess" -eq "num" ]; then
+	if [[ $guess -eq num ]] then
 	echo "Guessed!" 
 		else
 		if [[ $guess -gt num ]]
 		then
 			echo "Too much, press Enter:"
 			guess_file
-		else if [[ $guess -lt num ]]
+		else if [[ $guess -lt num ]] then
 			echo "Too less, press Enter:"
 			guess_file
 		fi
+	fi
 	fi
 	}
 	
