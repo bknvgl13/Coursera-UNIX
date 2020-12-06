@@ -10,21 +10,22 @@ num=$(-type f| wc -l)
 function guess_file {
 	num = $num_file
 	echo "Enter your guess for the number of files in directory:"
+	
+	while [[ $guess -ne num ]] do 
 	read guess
 	if [[ $guess -eq num ]] then
 	echo "Guessed!" 
-		else
-		if [[ $guess -gt num ]]
+	break
+		elif [[ $guess -gt num ]]
 		then
 			echo "Too much, press Enter:"
 			guess_file
-		else if [[ $guess -lt num ]] then
+		elif [[ $guess -lt num ]] then
 			echo "Too less, press Enter:"
 			guess_file
 		fi
-	fi
-	fi
+	done
 	}
-	
+
 	echo "Guess how many files are in the current directory:"
 	guess_file 
