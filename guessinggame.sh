@@ -3,14 +3,11 @@
 #Algorithm: first, the number of files in the directory is calculated, then the expected number is entered. 
 #Then there is a comparison. The program ends when the user guesses the number correctly.
 
-function num_file() {
-num=$(-ls| wc -l)
-}
+num=$(ls | wc -l)
 
 function guess_file {
-	num = $(-ls| wc -l)
 	echo "Enter your guess for the number of files in directory:"
-	
+	read guess
 	while [[ $guess -ne num ]] 
 	do 
 	if [[ $guess -gt num ]]
@@ -28,4 +25,4 @@ function guess_file {
 	
 	echo "Guess how many files are in the current directory:"
 	guess_file 
-	echo "Guessed!
+	echo "Guessed!"
