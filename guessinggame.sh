@@ -4,7 +4,7 @@
 #Then there is a comparison. The program ends when the user guesses the number correctly.
 
 function num_file() {
-num=$(-type f| wc -l)
+num=$(-ls| wc -l)
 }
 
 function guess_file {
