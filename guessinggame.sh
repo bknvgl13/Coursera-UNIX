@@ -11,7 +11,8 @@ function guess_file {
 	num = $num_file
 	echo "Enter your guess for the number of files in directory:"
 	
-	while [[ $guess -ne num ]] do 
+	while [[ $guess -ne num ]] 
+	do 
 	read guess
 	if [[ $guess -eq num ]] then
 	echo "Guessed!" 
