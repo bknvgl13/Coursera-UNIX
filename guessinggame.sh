@@ -13,20 +13,19 @@ function guess_file {
 	
 	while [[ $guess -ne num ]] 
 	do 
-	read guess
-	if [[ $guess -eq num ]] then
-	echo "Guessed!" 
-	break
-		elif [[ $guess -gt num ]]
+	if [[ $guess -gt num ]]
 		then
 			echo "Too much, press Enter:"
 			guess_file
-		elif [[ $guess -lt num ]] then
+		elif [[ $guess -lt num ]] 
+		     then
 			echo "Too less, press Enter:"
 			guess_file
 		fi
+		read guess
 	done
 	}
-
+	
 	echo "Guess how many files are in the current directory:"
 	guess_file 
+	echo "Guessed!
