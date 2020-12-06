@@ -8,7 +8,7 @@ num=$(-ls| wc -l)
 }
 
 function guess_file {
-	num = $num_file
+	num = $(-ls| wc -l)
 	echo "Enter your guess for the number of files in directory:"
 	
 	while [[ $guess -ne num ]] 
