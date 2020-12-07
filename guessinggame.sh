@@ -13,7 +13,7 @@ function guess_file {
 	if [[ $guess -gt num ]]
 		then
 			echo "Too much, press Enter:"
-			gread guess
+			read guess
 		elif [[ $guess -lt num ]] 
 		     then
 			echo "Too less, press Enter:"
